@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-17 xl:pt-30 mx-5 xl:px-13">
+  <section class="pt-17 xl:pt-30 mx-5 xl:mx-5">
     <h2
       class="text-2xl xl:text-[2.5rem] font-medium mr-5 xl:mx-5 bg-[linear-gradient(to_right,_rgba(153,172,190,1)_0%,_rgba(224,240,255,1)_37%,_rgba(153,172,190,1)_63%,_rgba(50,61,72,1)_100%)] bg-clip-text text-transparent"
     >

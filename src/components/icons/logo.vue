@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'LogoIcon'
+}
+</script>
+
 <template>
   <svg
     class="z-10 w-10 xl:w-15 aspect-[1/1]"
