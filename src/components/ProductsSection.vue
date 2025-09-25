@@ -729,7 +729,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Xiaomi/XiaomiPOCOF712ГБ+512ГБ(Белый_White).png"
+          src="../images/Xiaomi/XiaomiPOCOF712ГБ+512ГБWhite.png"
           alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -751,7 +751,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Xiaomi/XiaomiPOCOF712ГБ+512ГБ(Чёрный_Black).png"
+          src="../images/Xiaomi/XiaomiPOCOF712ГБ+512ГБBlack.png"
           alt="Xiaomi POCO F7 12ГБ+512ГБ (Чёрный Black)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
