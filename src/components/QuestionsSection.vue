@@ -5,23 +5,35 @@ const activeIndex = ref(null) // Индекс активного вопроса
 const questions = ref([
   {
     title: 'Где заказывать товары?',
-    content: 'Ответ на первый вопрос...',
+    content: 'В нашем Telegram-канале — самые свежие и актуальные новинки, акции и скидки. Напрямую в нашем ТГ боте — оформляйте заказ в пару кликов.',
   },
   {
     title: 'Как добраться до магазина?',
-    content: 'Ответ на второй вопрос...',
-  },
-  {
-    title: 'Как узнать какие товары сейчас есть в наличии?',
-    content: 'Ответ на третий вопрос...',
+    content: '• Багратионовская (5 мин пешком) – выход №2.\n• На автомобиле: парковка у ТЦ Горбушка (платная).\n• На общественном транспорте: автобусы №135, № М7 до остановки «Багратионовский проезд»',
   },
   {
     title: 'Как работает гарантия?',
-    content: 'Ответ на четвертый вопрос...',
+    content: '14 дней – обмен или возврат товара при выявлении заводского брака. На все технически сложные товары (смартфоны, планшеты, ПК, игровые приставки, акустические системы, бытовая техника и электроника) предоставляется гарантийный талон на 3 месяца с момента покупки',
   },
   {
-    title: 'Есть ли какие-то скидки?',
-    content: 'Ответ на пятый вопрос...',
+    title: 'Как узнать какие товары сейчас есть в наличии?',
+    content: 'Актуальные товары вы всегда можете посмотреть в нашем каталоге. Если не нашли нужную модель — напишите нашему менеджеру, он поможет подобрать или заказать. Рекомендуем бронировать технику заранее, так как количество товаров ограничено.',
+  },
+  {
+    title: 'Есть ли мы на маркетплейсах?',
+    type: 'links',
+    links: [
+      {
+        label: 'Яндекс Маркет',
+        href: 'https://market.yandex.ru/business--stella-polare-1/107778809',
+        platform: 'yandex',
+      },
+      {
+        label: 'Ozon',
+        href: 'https://www.ozon.ru/seller/stella-polare-1459218/products/?miniapp=seller',
+        platform: 'ozon',
+      },
+    ],
   },
 ])
 
@@ -43,11 +55,11 @@ function toggleQuestion(index) {
       <p
         class="hidden md:block md:w-1/2 xl:w-[79.25%] xl:mx-5 mt-[2.1875rem] md:text-lg xl:text-2xl font-normal text-white/70"
       >
-        Есть вопрос, на который не было ответа? Пиши на почту
-        <a
-          class="text-2xl font-normal text-white/70 relative underline"
-          href="mailto:example@example.com"
-          >sp@gmail.com</a
+        Есть вопрос, на который не было ответа? Пиши в Telegram 
+        <span
+          class="text-2xl font-normal text-white/70 relative"
+          href=""
+          >@SPShopShop</span
         >
       </p>
     </div>
@@ -93,7 +105,41 @@ function toggleQuestion(index) {
             opacity: activeIndex === index ? '1' : '0',
           }"
         >
-          {{ item.content }}
+          <template v-if="item.type === 'links'">
+            <div class="flex gap-4">
+              <a
+                v-for="(link, i) in item.links"
+                :key="i"
+                :href="link.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#13161a] hover:bg-white/80 active:bg-white/60 transition-colors"
+              >
+                <img
+                  v-if="link.platform === 'yandex'"
+                  src="https://www.ph4.ru/DL/LOGO_ICON/y/ya_market_.gif"
+                  alt="Yandex Market"
+                  width="20"
+                  height="20"
+                  style="display: inline-block; vertical-align: middle;"
+                  aria-hidden="true"
+                />
+                <img
+                  v-else-if="link.platform === 'ozon'"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ozon_logo_clear.svg/970px-Ozon_logo_clear.svg.png?20210512142931"
+                  alt="Ozon"
+                  width="40"
+                  height="50"
+                  style="display: inline-block; vertical-align: middle;"
+                  aria-hidden="true"
+                />
+                {{ link.label }}
+              </a>
+            </div>
+          </template>
+          <template v-else>
+            <div class="whitespace-pre-line">{{ item.content }}</div>
+          </template>
         </div>
       </li>
     </ul>
@@ -109,9 +155,11 @@ function toggleQuestion(index) {
 <style scoped>
 .rotate-90 {
   transform: rotate(90deg);
+  transition: transform 0.6s ease;
 }
 
 .rotate-180 {
   transform: rotate(180deg);
+  transition: transform 1s ease;
 }
 </style>

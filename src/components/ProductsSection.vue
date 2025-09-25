@@ -10,12 +10,13 @@
         class="products_nav flex h-fit py-1 items-center border border-solid border-white/10 bg-white/5 mx-5 rounded-[0.5rem] mt-7 xl:mt-15 w-fit"
       >
         <li
-          class="products_nav_item active mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
-          data-content="Apple_content"
+          class="products_nav_item mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
+          :class="{ active: activeTab === 'Apple_content' }"
         >
           <button
             class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
             type="button"
+            @click="setActive('Apple_content', $event)"
           >
             <div
               class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"
@@ -75,13 +76,15 @@
             <span class="text-xl xl:text-[2rem] font-medium text-white/70 leading-none">Apple</span>
           </button>
         </li>
+        
         <li
           class="products_nav_item mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
-          data-content="Dyson_content"
+          :class="{ active: activeTab === 'Dyson_content' }"
         >
           <button
             class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
             type="button"
+            @click="setActive('Dyson_content', $event)"
           >
             <div
               class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"
@@ -120,11 +123,12 @@
         </li>
         <li
           class="products_nav_item mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
-          data-content="Sony_content"
+          :class="{ active: activeTab === 'Sony_content' }"
         >
           <button
             class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
             type="button"
+            @click="setActive('Sony_content', $event)"
           >
             <div
               class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"
@@ -147,11 +151,12 @@
         </li>
         <li
           class="products_nav_item mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
-          data-content="Xiaomi_content"
+          :class="{ active: activeTab === 'Xiaomi_content' }"
         >
           <button
             class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
             type="button"
+            @click="setActive('Xiaomi_content', $event)"
           >
             <div
               class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"
@@ -176,11 +181,12 @@
         </li>
         <li
           class="products_nav_item mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
-          data-content="Xbox_content"
+          :class="{ active: activeTab === 'Xbox_content' }"
         >
           <button
             class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
             type="button"
+            @click="setActive('Xbox_content', $event)"
           >
             <div
               class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"
@@ -201,22 +207,73 @@
             <span class="text-xl xl:text-[2rem] font-medium text-white/70 leading-none">Xbox</span>
           </button>
         </li>
+        <li
+          class="products_nav_item mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
+          :class="{ active: activeTab === 'Samsung_content' }"
+        >
+          <button
+            class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
+            type="button"
+            @click="setActive('Samsung_content', $event)"
+          >
+            <div
+              class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"
+            >
+              <img
+                src="../images/SamsungIcon.png"
+                alt="Samsung"
+                class="w-[25px] h-[25px] object-contain"
+                draggable="false"
+              />
+            </div>
+            <span class="text-xl xl:text-[2rem] font-medium text-white/70 leading-none">Samsung</span>
+          </button>
+        </li>
+
+        <li
+          class="products_nav_item mx-[2px] xl:mx-1 px-2 py-1 xl:py-3 xl:px-4 rounded-[0.375rem] xl:rounded-[0.75rem]"
+          :class="{ active: activeTab === 'StellaPolare_content' }"
+        >
+          <button
+            class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
+            type="button"
+            @click="setActive('StellaPolare_content', $event)"
+          >
+            <div
+              class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"
+            >
+              <img
+                src="/logo.png"
+                alt="Samsung"
+                class="w-[20px] h-[20px] object-contain"
+                draggable="false"
+              />
+            </div>
+            <span class="text-xl xl:text-[2rem] font-medium text-white/70 leading-none whitespace-nowrap">Stella Polare</span>
+          </button>
+        </li>
       </ul>
     </div>
 
     <ul
-      class="products_list active px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
+      class="products_list px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
       id="Apple_content"
+      v-show="activeTab === 'Apple_content'"
     >
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/iPhone17ProOrange.png"
+          alt="Apple iPhone 17 Pro Max 256 GB Orange"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Apple iPhone 17 Pro Max<br />256 GB Orange</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
+          >125000₽</span
         >
         <button
           class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
@@ -226,14 +283,19 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Apple/iPhone17ProMax 256GbDeep BlueSIM+eSIM.png"
+          alt="Apple iPhone 17 Pro 256 GB Blue Titanium"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Apple iPhone 17 Pro<br />256 GB Deep Blue</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
+          >115000₽</span
         >
         <button
           class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
@@ -243,14 +305,19 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Apple/iPhone17Pro Max256Gb SilverSIM+eSIM.png"
+          alt="Apple iPhone 15 Pro 256 GB Blue Titanium"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Apple iPhone 17 Pro<br />256 GB SilverSIM</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
+          >105000₽</span
         >
         <button
           class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
@@ -260,14 +327,19 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Apple/iPhoneAir256GBSkyBlueeSIM.png"
+          alt="Apple iPhone 14 Pro 256 GB Purple Titanium"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Apple iPhone 17 Air<br />256 GB Sky Blue</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
+          >95000₽</span
         >
         <button
           class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
@@ -277,14 +349,19 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Apple/iPhoneAir256GBLightGoldeSIM-Photoroom.png"
+          alt="Apple iPhone 13 Pro 256 GB Graphite"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Apple iPhone 17 Air<br />256 GB Light Golde</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
+          >85000₽</span
         >
         <button
           class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
@@ -294,14 +371,85 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Apple/iPhone16ProMax256GbDesertTitaniumSIM+eSIM.png"
+          alt="Apple iPhone 12 Pro 256 GB Pacific Blue"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Apple iPhone 16 Pro<br />256 GB Desert Titanium</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
+          >75000₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Apple/AppleiPhone16ProMax256GbNaturalTitaniumSIM+eSIM.png"
+          alt="Apple iPhone 12 Pro 256 GB Pacific Blue"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Apple iPhone 16 Pro<br />256 GB Natural Titanium</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >75000₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Apple/AppleiPadAir613M2(2024)128GbWi-FiPurple.png"
+          alt="Apple iPhone 12 Pro 256 GB Pacific Blue"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Apple iPad Air 13 M2 16<br />256 GB Purple</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >75000₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Apple/AppleiPadAir613M2(2024)128GbWi-FiBlue.png"
+          alt="Apple iPhone 12 Pro 256 GB Pacific Blue"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Apple iPad Air 13 M2 16<br />256 GB Blue</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >75000₽</span
         >
         <button
           class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
@@ -314,13 +462,19 @@
     <ul
       class="products_list px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
       id="Dyson_content"
+      v-show="activeTab === 'Dyson_content'"
     >
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Dyson/ВыпрямительDysonAirstraitHT01PrussianBlue:Copper.png"
+          alt="Dyson product"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Выпрямитель Dyson Airstrait <br>  HT01<br />Prussian Blue / Copper</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -333,11 +487,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Dyson/ВыпрямительDysonAirstraitHT01StrawberryBronze:Blush Pink.png"
+          alt="Dyson Airstrait HT01 Strawberry Bronze / Blush Pink"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Выпрямитель Dyson Airstrait<br />HT01<br />Strawberry Bronze / Blush Pink</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -350,11 +509,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Dyson/СтайлерDysonAirwrapCompleteLongHS05BlueBlush.png"
+          alt="Dyson Airwrap Complete Long HS05 Blue Blush"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Стайлер Dyson Airwrap <br />Complete Long HS05<br /> Blue Blush</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -367,11 +531,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Dyson/СтайлерDysonAirwrapCompleteLongHS05CeramicpinkRosegold.png"
+          alt="Dyson Airwrap Complete Long HS05 Ceramic Pink/Rose Gold"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Стайлер Dyson Airwrap <br />Complete Long HS05<br />Ceramic Pink / Rose Gold</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -384,11 +553,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Dyson/ФенDysonSupersonicHD15Blue_Blue.png"
+          alt="Фен Dyson Supersonic HD15 Blue/Blue"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Фен Dyson Supersonic<br />HD15 Blue/Blue</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -401,11 +575,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Dyson/ФенDysonSupersonicHD08Fuchsia_Nickel.png"
+          alt="Фен Dyson Supersonic HD08 Fuchsia/Nickel"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Фен Dyson Supersonic<br />HD08 Fuchsia/Nickel</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -421,13 +600,19 @@
     <ul
       class="products_list px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
       id="Sony_content"
+      v-show="activeTab === 'Sony_content'"
     >
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/PS/ИгроваяконсольSonyPlayStation5Slim(1ТБ)-Photoroom.png"
+          alt="Sony PlayStation 5 Slim"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Sony PlayStation 5 Slim<br />1 ТБ</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -440,11 +625,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/PS/ИгроваяконсольSonyPlayStation5SlimсДисководом(1 ТБ).png"
+          alt="Sony PlayStation 5 Slim с дисководом"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Sony PlayStation 5 Slim<br />1 ТБ с дисководом</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -457,11 +647,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/PS/БеспроводнойгеймпадSonyDualSenseдляигровойконсолиPlayStation5,коллекция«Галактика».png"
+          alt="Sony DualSense Wireless Controller для PlayStation 5, коллекция «Галактика»"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Беспроводной геймпад Sony <br> DualSense для PlayStation 5, <br> коллекция «Галактика»</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -474,11 +669,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/PS/БеспроводнойгеймпадSonyDualSenseдляигровойконсолиPlayStation5белый.png"
+          alt="Sony DualSense Wireless Controller для PlayStation 5, коллекция «Галактика»"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Беспроводной геймпад Sony <br> DualSense для PlayStation 5 <br> белый</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -490,12 +690,18 @@
           Приобрести
         </button>
       </li>
+
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/PS/БеспроводнойгеймпадSonyDualSenseдляPlayStation5,«Чёрная полночь».png"
+          alt="Sony DualSense Wireless Controller для PlayStation 5, коллекция «Галактика»"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Беспроводной геймпад Sony <br> DualSense для PlayStation 5 <br> "Черная полночь»"</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -507,34 +713,25 @@
           Приобрести
         </button>
       </li>
-      <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
-      >
-        <div class="overlay"></div>
-        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
-        >
-        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
-        >
-        <button
-          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
-          type="button"
-        >
-          Приобрести
-        </button>
-      </li>
+
+    
     </ul>
     <ul
       class="products_list px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
       id="Xiaomi_content"
+      v-show="activeTab === 'Xiaomi_content'"
     >
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Xiaomi/XiaomiPOCOF712ГБ+512ГБ(Белый_White).png"
+          alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Xiaomi POCO F7<br />12ГБ + 512ГБ (Белый)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -547,11 +744,16 @@
         </button>
       </li>
       <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Xiaomi/XiaomiPOCOF712ГБ+512ГБ(Чёрный_Black).png"
+          alt="Xiaomi POCO F7 12ГБ+512ГБ (Чёрный Black)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Xiaomi POCO F7<br />12ГБ + 512ГБ (Чёрный)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -563,85 +765,24 @@
           Приобрести
         </button>
       </li>
-      <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
-      >
-        <div class="overlay"></div>
-        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
-        >
-        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
-        >
-        <button
-          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
-          type="button"
-        >
-          Приобрести
-        </button>
-      </li>
-      <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
-      >
-        <div class="overlay"></div>
-        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
-        >
-        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
-        >
-        <button
-          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
-          type="button"
-        >
-          Приобрести
-        </button>
-      </li>
-      <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
-      >
-        <div class="overlay"></div>
-        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
-        >
-        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
-        >
-        <button
-          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
-          type="button"
-        >
-          Приобрести
-        </button>
-      </li>
-      <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
-      >
-        <div class="overlay"></div>
-        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
-        >
-        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
-        >
-        <button
-          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
-          type="button"
-        >
-          Приобрести
-        </button>
-      </li>
+     
     </ul>
     <ul
       class="products_list px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
       id="Xbox_content"
+      v-show="activeTab === 'Xbox_content'"
     >
       <li
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Xbox/ИгроваяконсольMicrosoftXboxSeriesX(1ТБ).png"
+          alt="Игровая консоль Microsoft Xbox Series X (1ТБ)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Игровая консоль<br />Microsoft Xbox Series X (1ТБ)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -657,8 +798,13 @@
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Xbox/ИгроваяконсольMicrosoftXboxSeriesS(1ТБ).png"
+          alt="Игровая консоль Microsoft Xbox Series S (1ТБ)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Игровая консоль<br />Microsoft Xbox Series S (1ТБ)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -674,8 +820,13 @@
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Xbox/БеспроводнойгеймпадMicrosoftXboxWirelessControllerЧёрный.png"
+          alt="Беспроводной геймпад Microsoft Xbox Wireless Controller (Чёрный)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Беспроводной геймпад<br />Microsoft Xbox <Br></Br> Wireless Controller (Чёрный)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -691,8 +842,13 @@
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Xbox/БеспроводнойгеймпадMicrosoftXboxWirelessControllerФиолетовый.png"
+          alt="Беспроводной геймпад Microsoft Xbox Wireless Controller (Фиолетовый)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Беспроводной геймпад<br />Microsoft Xbox <Br></Br> Wireless Controller (Фиолетовый)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -708,8 +864,13 @@
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
+        <img
+          src="../images/Xbox/БеспроводнойгеймпадMicrosoftXboxWirelessControllerБелый.png"
+          alt="Беспроводной геймпад Microsoft Xbox Wireless Controller (Белый)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
+          >Беспроводной геймпад<br />Microsoft Xbox <Br></Br> Wireless Controller (Белый)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -721,26 +882,208 @@
           Приобрести
         </button>
       </li>
-      <li
-        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-no-repeat bg-[center_top_22px] bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
-      >
-        <div class="overlay"></div>
-        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Apple iPhone 15 Pro Max<br />256 GB Blue Titanium</span
-        >
-        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
-          >110500₽</span
-        >
-        <button
-          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
-          type="button"
-        >
-          Приобрести
-        </button>
-      </li>
+
     </ul>
+
+    <ul
+      class="products_list px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
+      id="Samsung_content"
+      v-show="activeTab === 'Samsung_content'"
+    >
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Samsung/SamsungGalaxyS25+12ГБ_256ГБ(Синий _ Navy).png"
+          alt="Samsung Galaxy S25+ 12ГБ 256ГБ (Синий Navy)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Samsung Galaxy S25+<br />12ГБ + 256ГБ (Синий)</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >110500₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Samsung/SamsungGalaxyS25+12ГБ_256ГБ(Тёмно-серый_Blueblack).png"
+          alt="Samsung Galaxy S25+ 12ГБ 256ГБ (Тёмно-серый Blueblack)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Samsung Galaxy S25+<br />12ГБ + 256ГБ (Тёмно-серый)</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >110500₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Samsung/SamsungGalaxyS25Edge12_256ГБ(«Угольно-чёрныйтитан»_TitaniumJetblack).png"
+          alt="Samsung Galaxy S25 Edge 12ГБ 256ГБ (Угольно-чёрный титан Titanium Jetblack)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Samsung Galaxy S25 Edge<br />12ГБ + 256ГБ <Br></Br> (Угольно-чёрный титан)</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >110500₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Samsung/SamsungGalaxyS25Ultra12ГБ_256ГБ(«Угольно-чёрныйтитан»_TitaniumJetblack).png"
+          alt="Samsung Galaxy S25 Ultra 12ГБ 256ГБ (Угольно-чёрный титан Titanium Jetblack)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Samsung Galaxy S25 Ultra<br />12ГБ + 256ГБ <br>(Угольно-чёрный титан)</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >110500₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+     
+    </ul>
+
+
+    <ul
+      class="products_list px-5 mt-5 xl:mt-18 gap-x-4 xl:gap-x-10 h-113 xl:h-125 w-full"
+      id="StellaPolare_content"
+      v-show="activeTab === 'StellaPolare_content'"
+    >
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Stella Polare/ГеймпадStellaPolareOrange.png"
+          alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
+          class="absolute top-[50px] left-1/2 -translate-x-1/2 max-h-[40%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Геймпад Stella Polare<br />Orange</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >110500₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Stella Polare/ГеймпадStellaPolareSilver.png"
+          alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
+          class="absolute bottom-[130px] left-1/2 -translate-x-1/2 max-h-[90%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Геймпад Stella Polare<br />Silver</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >110500₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+
+
+      <li
+        class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
+      >
+        <div class="overlay"></div>
+        <img
+          src="../images/Stella Polare/ОсушительВоздухаStellaPolareWhite-.png"
+          alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
+          class="absolute bottom-[185px] right-[-110px] -translate-x-1/2 max-h-[70%] w-auto object-contain select-none pointer-events-none z-0"
+        />
+        <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
+          >Осушитель воздуха <Br></Br>  Stella Polare White</span
+        >
+        <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
+          >110500₽</span
+        >
+        <button
+          class="mt-5 xl:mt-7 bg-white rounded-full border-none w-full h-13 text-xl xl:text-2xl font-normal color-[#13161a] z-40 hover:border-[2.2px] hover:border-solid hover:border-[#0064ff] active:border-none active:bg-white/50 active:text-[#13161a]/50"
+          type="button"
+        >
+          Приобрести
+        </button>
+      </li>
+     
+     
+    </ul>
+
+    
   </section>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const activeTab = ref('Apple_content')
+
+const setActive = (tabId, event) => {
+  activeTab.value = tabId
+  // Center clicked tab in the scroll container
+  const navItem = event?.currentTarget?.closest('li')
+  const container = navItem?.parentElement
+  if (navItem && container) {
+    const itemRect = navItem.getBoundingClientRect()
+    const containerRect = container.getBoundingClientRect()
+    const scrollPosition = itemRect.left - containerRect.left + container.scrollLeft - 4
+    container.scrollTo({ left: scrollPosition, behavior: 'smooth' })
+  }
+}
+</script>
 
 <style scoped>
 .products_nav_container,
@@ -757,32 +1100,13 @@
 }
 
 .products_list {
-  display: none;
+  display: flex;
   overflow-x: scroll;
   white-space: nowrap;
   scrollbar-width: none;
-  visibility: hidden;
-  opacity: 0;
-  transition:
-    opacity 0.3s ease,
-    visibility 0s 0.3s;
 }
 
-.products_list.active {
-  display: flex;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.Apple_product_item {
-  background-size: 197px 289px;
-  background-image: url(../images/iPhone.png);
-}
-
-.Xbox_product_item {
-  background-image: url(../images/Xbox.png);
-}
+/* Background-image classes removed; images now rendered with <img> and Tailwind */
 
 .product_item::before {
   content: '';
