@@ -898,7 +898,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Samsung/SamsungGalaxyS25+12ГБ_256ГБ(Синий _ Navy).png"
+          src="../images/Samsung/samsungBlue.png"
           alt="Samsung Galaxy S25+ 12ГБ 256ГБ (Синий Navy)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -920,7 +920,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Samsung/SamsungGalaxyS25+12ГБ_256ГБ(Тёмно-серый_Blueblack).png"
+          src="../images/Samsung/samsungBlack.png"
           alt="Samsung Galaxy S25+ 12ГБ 256ГБ (Тёмно-серый Blueblack)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -943,12 +943,12 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Samsung/SamsungGalaxyS25Edge12_256ГБ(«Угольно-чёрныйтитан»_TitaniumJetblack).png"
+          src="../images/Samsung/SamsungTitan.png"
           alt="Samsung Galaxy S25 Edge 12ГБ 256ГБ (Угольно-чёрный титан Titanium Jetblack)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Samsung Galaxy S25 Edge<br />12ГБ + 256ГБ <Br></Br> (Угольно-чёрный титан)</span
+          >Samsung Galaxy S25 Edge<br />12ГБ + 256ГБ <Br></Br> (Чёрный титан)</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -966,7 +966,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Samsung/SamsungGalaxyS25Ultra12ГБ_256ГБ(«Угольно-чёрныйтитан»_TitaniumJetblack).png"
+          src="../images/Samsung/SamsungCoal.png"
           alt="Samsung Galaxy S25 Ultra 12ГБ 256ГБ (Угольно-чёрный титан Titanium Jetblack)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
