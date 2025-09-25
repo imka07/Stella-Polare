@@ -574,6 +574,7 @@
           Приобрести
         </button>
       </li>
+      <!-- // -->
       <li
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
