@@ -513,7 +513,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Dyson/СтайлерDysonAirwrapCompleteLongHS05BlueBlush.png"
+          src="../images/Dyson/StylerBlue.png"
           alt="Dyson Airwrap Complete Long HS05 Blue Blush"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
