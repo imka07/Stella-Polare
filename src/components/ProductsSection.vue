@@ -82,7 +82,9 @@
           :class="{ active: activeTab === 'Dyson_content' }"
         >
           <button
-            class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none"
+            class="xl:py-3 xl:px-4 flex gap-x-3 items-ce
+            
+            nter justify-center bg-none border-none"
             type="button"
             @click="setActive('Dyson_content', $event)"
           >
@@ -469,7 +471,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Dyson/ВыпрямительDysonAirstraitHT01PrussianBlue:Copper.png"
+          src="../images/Dyson/DysonAirstraitHT01PrussianBlueCopper.png"
           alt="Dyson product"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -491,7 +493,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Dyson/ВыпрямительDysonAirstraitHT01StrawberryBronze:Blush Pink.png"
+          src="../images/Dyson/DysonAirstraitHT01StrawberryBronzeBlushPink.png"
           alt="Dyson Airstrait HT01 Strawberry Bronze / Blush Pink"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -513,7 +515,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Dyson/StylerBlue.png"
+          src="../images/Dyson/DysonAirwrap_HS05_BlueBlush.png"
           alt="Dyson Airwrap Complete Long HS05 Blue Blush"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -535,7 +537,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Dyson/СтайлерDysonAirwrapCompleteLongHS05CeramicpinkRosegold.png"
+          src="../images/Dyson/DysonAirwrap_HS05_Gold.png"
           alt="Dyson Airwrap Complete Long HS05 Ceramic Pink/Rose Gold"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -557,7 +559,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Dyson/ФенDysonSupersonicHD15Blue_Blue.png"
+          src="../images/Dyson/DysonSupersonicHD15BlueBlue.png"
           alt="Фен Dyson Supersonic HD15 Blue/Blue"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -580,7 +582,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Dyson/ФенDysonSupersonicHD08Fuchsia_Nickel.png"
+          src="../images/Dyson/DysonSupersonicHD08FuchsiNickel.png"
           alt="Фен Dyson Supersonic HD08 Fuchsia/Nickel"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -608,7 +610,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/PS/ИгроваяконсольSonyPlayStation5Slim(1ТБ)-Photoroom.png"
+          src="../images/PS/ps5Digital.png"
           alt="Sony PlayStation 5 Slim"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -630,7 +632,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/PS/ИгроваяконсольSonyPlayStation5SlimсДисководом(1 ТБ).png"
+          src="../images/PS/ps5Discovod.png"
           alt="Sony PlayStation 5 Slim с дисководом"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -652,7 +654,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/PS/БеспроводнойгеймпадSonyDualSenseдляигровойконсолиPlayStation5,коллекция«Галактика».png"
+          src="../images/PS/dualSenseBlue.png"
           alt="Sony DualSense Wireless Controller для PlayStation 5, коллекция «Галактика»"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -674,7 +676,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/PS/БеспроводнойгеймпадSonyDualSenseдляигровойконсолиPlayStation5белый.png"
+          src="../images/PS/dualSenseWhite.png"
           alt="Sony DualSense Wireless Controller для PlayStation 5, коллекция «Галактика»"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -697,7 +699,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/PS/БеспроводнойгеймпадSonyDualSenseдляPlayStation5,«Чёрная полночь».png"
+          src="../images/PS/dualSenseBlack.png"
           alt="Sony DualSense Wireless Controller для PlayStation 5, коллекция «Галактика»"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -778,7 +780,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Xbox/ИгроваяконсольMicrosoftXboxSeriesX(1ТБ).png"
+          src="../images/Xbox/xboxX.png"
           alt="Игровая консоль Microsoft Xbox Series X (1ТБ)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -800,7 +802,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Xbox/ИгроваяконсольMicrosoftXboxSeriesS(1ТБ).png"
+          src="../images/Xbox/xboxS.png"
           alt="Игровая консоль Microsoft Xbox Series S (1ТБ)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -822,7 +824,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Xbox/БеспроводнойгеймпадMicrosoftXboxWirelessControllerЧёрный.png"
+          src="../images/Xbox/xboxgpblack.png"
           alt="Беспроводной геймпад Microsoft Xbox Wireless Controller (Чёрный)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -844,7 +846,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Xbox/БеспроводнойгеймпадMicrosoftXboxWirelessControllerФиолетовый.png"
+          src="../images/Xbox/xboxgppurple.png"
           alt="Беспроводной геймпад Microsoft Xbox Wireless Controller (Фиолетовый)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -866,7 +868,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Xbox/БеспроводнойгеймпадMicrosoftXboxWirelessControllerБелый.png"
+          src="../images/Xbox/xboxgpwhite.png"
           alt="Беспроводной геймпад Microsoft Xbox Wireless Controller (Белый)"
           class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[55%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -995,7 +997,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Stella Polare/ГеймпадStellaPolareOrange.png"
+          src="../images/Stella Polare/GamepadStellaPolareOrange.png"
           alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
           class="absolute top-[50px] left-1/2 -translate-x-1/2 max-h-[40%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -1018,7 +1020,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Stella Polare/ГеймпадStellaPolareSilver.png"
+          src="../images/Stella Polare/GamepadStellaPolareSilver.png"
           alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
           class="absolute bottom-[130px] left-1/2 -translate-x-1/2 max-h-[90%] w-auto object-contain select-none pointer-events-none z-0"
         />
@@ -1042,7 +1044,7 @@
       >
         <div class="overlay"></div>
         <img
-          src="../images/Stella Polare/ОсушительВоздухаStellaPolareWhite-.png"
+          src="../images/Stella Polare/airTechStellaPolareWhite-.png"
           alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
           class="absolute bottom-[185px] right-[-110px] -translate-x-1/2 max-h-[70%] w-auto object-contain select-none pointer-events-none z-0"
         />
