@@ -991,17 +991,17 @@
       id="StellaPolare_content"
       v-show="activeTab === 'StellaPolare_content'"
     >
-      <li
+    <li
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
       >
         <div class="overlay"></div>
         <img
           src="../images/Stella Polare/GamepadStellaPolareOrange.png"
-          alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
-          class="absolute top-[50px] left-1/2 -translate-x-1/2 max-h-[40%] w-auto object-contain select-none pointer-events-none z-0"
+          alt="Samsung Galaxy S25 Ultra 12ГБ 256ГБ (Угольно-чёрный титан Titanium Jetblack)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[35%] w-auto object-contain select-none pointer-events-none z-0"
         />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Геймпад Stella Polare<br />Orange</span
+          >Stella Polare Gamepad<br />Оранжевый</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -1020,11 +1020,11 @@
         <div class="overlay"></div>
         <img
           src="../images/Stella Polare/GamepadStellaPolareSilver.png"
-          alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
-          class="absolute bottom-[130px] left-1/2 -translate-x-1/2 max-h-[90%] w-auto object-contain select-none pointer-events-none z-0"
+          alt="Samsung Galaxy S25 Ultra 12ГБ 256ГБ (Угольно-чёрный титан Titanium Jetblack)"
+          class="absolute top-[22px] left-1/2 -translate-x-1/2 max-h-[30%] w-auto object-contain select-none pointer-events-none z-0"
         />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Геймпад Stella Polare<br />Silver</span
+          >Stella Polare Gamepad<br />Серебристый</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -1036,7 +1036,6 @@
           Приобрести
         </button>
       </li>
-
 
       <li
         class="product_item Apple_product_item w-97 h-full p-8 flex flex-col justify-end bg-[#717171]/10 rounded-[1.25rem] xl:rounded-[1.875rem] relative z-1"
@@ -1044,11 +1043,11 @@
         <div class="overlay"></div>
         <img
           src="../images/Stella Polare/airTechStellaPolareWhite-.png"
-          alt="Xiaomi POCO F7 12ГБ+512ГБ (Белый White)"
-          class="absolute bottom-[185px] right-[-110px] -translate-x-1/2 max-h-[70%] w-auto object-contain select-none pointer-events-none z-0"
+          alt="Samsung Galaxy S25 Ultra 12ГБ 256ГБ (Угольно-чёрный титан Titanium Jetblack)"
+          class="absolute top-[0px] left-1/2 -translate-x-1/2 max-h-[50%] w-auto object-contain select-none pointer-events-none z-0"
         />
         <span class="text-lg xl:text-2xl font-normal text-white/60 text-center z-40"
-          >Осушитель воздуха <Br></Br>  Stella Polare White</span
+          >Stella Polare Осушитель <br /> воздуха Белый</span
         >
         <span class="mt-[12px] text-xl xl:text-[1.75rem] font-semibold text-center text-white z-40"
           >110500₽</span
@@ -1060,7 +1059,6 @@
           Приобрести
         </button>
       </li>
-     
      
     </ul>
 
