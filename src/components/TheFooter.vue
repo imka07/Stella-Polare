@@ -36,7 +36,7 @@ import Whatsapp from './icons/whatsapp.vue'
             />
           </svg>
           <span class="text-[0.5rem] xl:text-xs text-white text-opacity-70 font-normal leading-3"
-            >2024 Stella Polare. Все права защищены</span
+            >2025 Stella Polare. Все права защищены</span
           >
         </div>
       </div>
@@ -45,21 +45,45 @@ import Whatsapp from './icons/whatsapp.vue'
         <li
           class="w-8 xl:w-12 aspect-[1/1] flex items-center justify-center bg-linear-to-b from-[#7DBAFF]/20 to-[#0353B1]/20 rounded-full"
         >
-          <Telegram />
+          <a
+            href="https://t.me/stellapolare07"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center w-full h-full"
+            aria-label="Telegram"
+          >
+            <Telegram />
+          </a>
+        </li>
+        <li
+          class="w-8 xl:w-12 aspect-[1/1] flex items-center justify-center bg-linear-to-b from-[#7DBAFF]/20 to-[#0353B1]/20 rounded-full"
+        >
+          <a
+            href="https://wa.me/8-901-389-00-16 "
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center w-full h-full"
+            aria-label="Whatsapp"
+          >
+            <Whatsapp />
+          </a>
         </li>
         <li
           class="w-8 xl:w-12 aspect-[1/1] flex items-center justify-center bg-linear-to-b from-[#7DBAFF]/20 to-[#0353B1]/20 bg-opacity-20 rounded-full"
         >
-          <Whatsapp />
-        </li>
-        <li
-          class="w-8 xl:w-12 aspect-[1/1] flex items-center justify-center bg-linear-to-b from-[#7DBAFF]/20 to-[#0353B1]/20 bg-opacity-20 rounded-full"
-        >
-          <Instagram />
+          <a
+            href="https://www.instagram.com/stellapolareshop"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center w-full h-full"
+            aria-label="Instagram"
+          >
+            <Instagram />
+          </a>
         </li>
       </ul>
     </div>
-    <ul class="mt-10 xl:mt-14 flex items-center justify-center gap-x-2 md:gap-x-3 xl:gap-x-5">
+    <!-- <ul class="mt-10 xl:mt-14 flex items-center justify-center gap-x-2 md:gap-x-3 xl:gap-x-5">
       <li>
         <a class="text-xs md:text-base xl:text-xl text-white/70 font-normal underline" href="#"
           >Поддержка</a
@@ -85,6 +109,6 @@ import Whatsapp from './icons/whatsapp.vue'
           >Товары</a
         >
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>

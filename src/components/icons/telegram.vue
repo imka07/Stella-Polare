@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'IconTelegram'
+}
+</script>
+
 <template>
   <svg
     class="-ml-1 w-4 h-3 xl:w-7 xl:h-6"

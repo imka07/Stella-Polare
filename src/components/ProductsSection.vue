@@ -82,11 +82,10 @@
           :class="{ active: activeTab === 'Dyson_content' }"
         >
           <button
-            class="xl:py-3 xl:px-4 flex gap-x-3 items-ce
-            
-            nter justify-center bg-none border-none"
+            class="xl:py-3 xl:px-4 flex gap-x-3 items-center justify-center bg-none border-none w-full"
             type="button"
             @click="setActive('Dyson_content', $event)"
+
           >
             <div
               class="w-[32px] h-[32px] bg-[#424447] bg-no-repeat bg-center rounded-[9.6px] flex items-center justify-center"

@@ -48,7 +48,7 @@
       </div>
       <p class="mt-4 text-center text-sm text-white">Связаться самостоятельно</p>
       <a class="block text-center text-sm text-white underline" href="tel:89255990016"
-        >8-925-599-00-16</a
+        >8-901-389-00-16 </a
       >
     </div>
   </section>
