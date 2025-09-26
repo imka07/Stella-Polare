@@ -211,32 +211,49 @@ function onTouchEnd(e) {
 <style scoped>
 /* Карточка хита */
 .hit-card {
-  @apply w-full rounded-xl md:rounded-[18px] flex flex-col items-center justify-start gap-y-5 md:gap-y-8 xl:gap-y-10 relative overflow-hidden min-h-[320px] sm:min-h-[252px] py-8 sm:py-0;
+  width: 100%;
+  border-radius: 1rem; /* rounded-xl */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem; /* gap-y-5 */
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  padding: 2rem 0 0 0;
   background-position: center bottom 10%;
   background-repeat: no-repeat;
   background-size: 65%;
 }
+
 @media (min-width: 640px) {
   .hit-card {
-    @apply flex-row items-start justify-center min-h-0 py-0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 252px;
+    padding: 0;
+    gap: 2rem; /* md:gap-y-8 */
     background-position: right 10% center;
     background-size: 45%;
-    min-height: 252px;
   }
 }
+
 @media (max-width: 639px) {
   .hit-card {
+    min-height: 320px;
     background-size: 80%;
     background-position: center bottom 10%;
-    min-height: 320px;
   }
 }
 
 /* Dyson */
 .hit-card--dyson {
-  background-image: linear-gradient(to left, #8D3367, #2A1A3E);
+  background: linear-gradient(to left, #8D3367, #2A1A3E);
   position: relative;
 }
+
 .hit-card--dyson::before {
   content: "";
   position: absolute;
@@ -249,6 +266,7 @@ function onTouchEnd(e) {
   z-index: 0;
   opacity: 0.7;
 }
+
 @media (max-width: 639px) {
   .hit-card--dyson::before {
     background-size: 410px;
@@ -264,6 +282,7 @@ function onTouchEnd(e) {
   background-size: 41%;
   position: relative;
 }
+
 @media (max-width: 639px) {
   .hit-card--macbook {
     background-image: none;
@@ -271,7 +290,10 @@ function onTouchEnd(e) {
   .hit-card--macbook::before {
     content: "";
     position: absolute;
-    left: 0; top: 0; width: 100%; height: 68%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 68%;
     background-image: url('../images/Macbook_hits_v.png');
     background-repeat: no-repeat;
     background-size: 100% 68%;
@@ -286,6 +308,7 @@ function onTouchEnd(e) {
 .hit-card--xiaomi {
   background-position: right -80px center;
 }
+
 @media (min-width: 640px) {
   .hit-card--xiaomi {
     background-position: center;
@@ -294,26 +317,114 @@ function onTouchEnd(e) {
 
 /* Контент карточки */
 .hit-card__header {
-  @apply flex gap-x-3 md:gap-x-5 z-10 items-center sm:ml-[10.17%] w-full;
+  display: flex;
+  gap: 0.75rem; /* gap-x-3 */
+  z-index: 10;
+  align-items: center;
+  margin-left: 10.17%;
+  width: 100%;
 }
+
+@media (min-width: 768px) {
+  .hit-card__header {
+    gap: 1.25rem; /* md:gap-x-5 */
+  }
+}
+
 .hit-card__icon {
-  @apply w-6 md:w-8 xl:w-10 h-7 md:h-9 xl:h-11;
+  width: 1.5rem;
+  height: 1.75rem;
 }
+
+@media (min-width: 768px) {
+  .hit-card__icon {
+    width: 2rem;
+    height: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hit-card__icon {
+    width: 2.5rem;
+    height: 2.75rem;
+  }
+}
+
 .hit-card__title {
-  @apply text-2xl sm:text-3xl md:text-4xl font-medium;
+  font-size: 1.5rem;
+  font-weight: 500;
   line-height: 1.1;
   word-break: break-word;
 }
+
+@media (min-width: 640px) {
+  .hit-card__title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hit-card__title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hit-card__title {
+    font-size: 2.5rem;
+  }
+}
+
 .hit-card__subtitle {
-  @apply mt-2 text-base sm:text-xl md:text-2xl;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
+
+@media (min-width: 640px) {
+  .hit-card__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hit-card__subtitle {
+    font-size: 1.5rem;
+  }
+}
+
 .hit-card__action {
-  @apply sm:ml-[10.17%] mt-5 sm:mt-0 z-10 w-full flex justify-center sm:justify-start;
+  margin-top: 1.25rem;
+  margin-left: 10.17%;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+@media (min-width: 640px) {
+  .hit-card__action {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+}
+
 .hit-card__button {
-  @apply border-none rounded-full w-36 sm:w-38 py-3 text-base sm:text-xl font-medium;
+  border: none;
+  border-radius: 9999px;
+  width: 9rem;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 500;
   transition: background 0.2s, color 0.2s;
 }
+
+@media (min-width: 640px) {
+  .hit-card__button {
+    width: 9.5rem;
+    font-size: 1.25rem;
+  }
+}
+
 @media (max-width: 639px) {
   .hit-card__button {
     width: 90%;
@@ -321,4 +432,5 @@ function onTouchEnd(e) {
     font-size: 1rem;
   }
 }
+
 </style>
